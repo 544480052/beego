@@ -25,7 +25,7 @@ type Trofile struct {
 	Email string
 }
 
-func getAllTests() map[string]*Test  {
+func GetAllTests() map[string]*Test  {
 	return TestList
 }
 
