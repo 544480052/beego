@@ -2,6 +2,7 @@ package controllers
 
 
 import (
+	"beegoApi/models"
 	"github.com/astaxie/beego"
 )
 
