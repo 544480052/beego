@@ -7,6 +7,14 @@ import (
 
 func init() {
 
+	beego.GlobalControllerRouter["beegoApi/controllers:TestController"] = append(beego.GlobalControllerRouter["beegoApi/controllers:TestController"],
+		beego.ControllerComments{
+			Method: "GetAll",
+			Router: `/`,
+			AllowHTTPMethods: []string{"get"},
+			MethodParams: param.Make(),
+			Params: nil})
+
 	beego.GlobalControllerRouter["beegoApi/controllers:ObjectController"] = append(beego.GlobalControllerRouter["beegoApi/controllers:ObjectController"],
 		beego.ControllerComments{
 			Method: "Post",
