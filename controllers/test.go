@@ -14,7 +14,10 @@ type TestController struct {
 
 func (this *TestController) GetAll() {
 	this.Ctx.WriteString("什么鬼")
-
+	test := models.getAllTest()
+	this.Data["json"] = test
+	this.ServeJSON()
+	this.Ctx.WriteString(this)
 }
 
 func (this *TestController) Get()  {

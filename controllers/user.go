@@ -31,10 +31,9 @@ func (u *UserController) Post() {
 // @Success 200 {object} models.User
 // @router / [get]
 func (u *UserController) GetAll() {
-	u.Ctx.WriteString("来耍耍啊")
-	//users := models.GetAllUsers()
-	//u.Data["json"] = users
-	//u.ServeJSON()
+	users := models.GetAllUsers()
+	u.Data["json"] = users
+	u.ServeJSON()
 }
 
 // @Title Get
