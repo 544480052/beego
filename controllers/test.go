@@ -18,7 +18,6 @@ func (this *TestController) GetAll() {
 	test := models2.GetAllTests()
 	this.Data["json"] = test
 	this.ServeJSON()
-	this.Ctx.WriteString(this)
 }
 
 func (this *TestController) Get()  {
