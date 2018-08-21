@@ -31,9 +31,10 @@ func (u *UserController) Post() {
 // @Success 200 {object} models.User
 // @router / [get]
 func (u *UserController) GetAll() {
-	users := models.GetAllUsers()
-	u.Data["json"] = users
-	u.ServeJSON()
+	this.Ctx.WriteString("来耍耍啊")
+	//users := models.GetAllUsers()
+	//u.Data["json"] = users
+	//u.ServeJSON()
 }
 
 // @Title Get
@@ -43,16 +44,17 @@ func (u *UserController) GetAll() {
 // @Failure 403 :uid is empty
 // @router /:uid [get]
 func (u *UserController) Get() {
-	uid := u.GetString(":uid")
-	if uid != "" {
-		user, err := models.GetUser(uid)
-		if err != nil {
-			u.Data["json"] = err.Error()
-		} else {
-			u.Data["json"] = user
-		}
-	}
-	u.ServeJSON()
+	this.Ctx.WriteString("来耍耍")
+	//uid := u.GetString(":uid")
+	//if uid != "" {
+	//	user, err := models.GetUser(uid)
+	//	if err != nil {
+	//		u.Data["json"] = err.Error()
+	//	} else {
+	//		u.Data["json"] = user
+	//	}
+	//}
+	//u.ServeJSON()
 }
 
 // @Title Update
