@@ -15,6 +15,7 @@ type TestController struct {
 func (this *TestController) GetAll() {
 	u := beego.BConfig.RunMode
 	this.Ctx.WriteString(u)
+	
 	//this.Ctx.WriteString("what")
 	//test := models.GetAllTests()
 	//this.Data["json"] = test
