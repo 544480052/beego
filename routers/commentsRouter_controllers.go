@@ -13,7 +13,7 @@ func init() {
 			AllowHTTPMethods: []string{"get"},
 			MethodParams: param.Make(),
 			Params: nil})
-	
+
 	beego.GlobalControllerRouter["beegoApi/controllers:ObjectController"] = append(beego.GlobalControllerRouter["beegoApi/controllers:ObjectController"],
 		beego.ControllerComments{
 			Method: "Post",
