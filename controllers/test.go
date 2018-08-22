@@ -22,6 +22,6 @@ func (this *TestController) GetAll() {
 
 func (this *TestController) Get()  {
 
-	this.Ctx.WriteString("来耍耍")
+	this.Ctx.WriteString("来耍")
 
 }
